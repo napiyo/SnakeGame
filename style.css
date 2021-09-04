@@ -9,7 +9,7 @@
 
 body {
     /* some basic style for whole body */
-    background: url('/images/bg.jpg');
+    background: url(./images/bg.jpg);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     /* overflow: hidden; */
