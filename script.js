@@ -16,10 +16,10 @@ let gameON = true
 
 let musicCheckBox = document.querySelector(".musicCheckBox")
     // music Files 
-const foodSound = new Audio("/music/food.mp3")
-const gameoverSound = new Audio("/music/gameover.mp3")
-const moveSound = new Audio("/music/move.mp3")
-const MusicSound = new Audio("/music/music.mp3")
+const foodSound = new Audio("./music/food.mp3")
+const gameoverSound = new Audio("./music/gameover.mp3")
+const moveSound = new Audio("./music/move.mp3")
+const MusicSound = new Audio("./music/music.mp3")
     // variables and constant that we will need in logic 
 let snakePosition = [{ x: 19, y: 20 }, { x: 20, y: 20 }];
 
