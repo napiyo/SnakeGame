@@ -1,0 +1,181 @@
+/* importing google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+* {
+    /* removing default padding and margin */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* some basic style for whole body */
+    background: url('/images/bg.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    /* overflow: hidden; */
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    /* to centerize our game area  */
+    display: flex;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/* the game container */
+
+.board {
+    width: 700px;
+    height: 550px;
+    max-width: 80vw;
+    max-height: 80vh;
+    /* background: rgb(224, 240, 0); */
+}
+
+.keysGuide {
+    position: absolute;
+    right: 6em;
+    bottom: 4em;
+}
+
+.keysGuide img {
+    width: 6em;
+}
+
+
+/* score display , some styling  */
+
+.scoreCard {
+    font-size: 1em;
+    padding: 3px 30px;
+    /* border: 4px rgb(253, 253, 253) solid; */
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    color: rgb(206, 193, 193);
+    background: rgb(53, 104, 170);
+}
+
+.scoreCard span {
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+}
+
+
+/* game will be played insite gameArea */
+
+.gameArea {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background: rgb(206, 206, 206);
+    /* border: 4px rgb(175, 175, 175) solid; */
+    box-sizing: border-box;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+    grid-gap: 1px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 6px 6px 15px rgb(8, 51, 241), -6px 6px 15px rgb(8, 51, 241);
+}
+
+
+/* food style  */
+
+.food {
+    background: red;
+    border-radius: 50%;
+}
+
+
+/* still snake */
+
+.snake {
+    background: #000;
+}
+
+.modalforfirstTime {
+    position: absolute;
+    background: rgb(44, 109, 184);
+    color: white;
+    font-size: 2em;
+    width: 800px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 70vw;
+    z-index: 2;
+    opacity: 1;
+    animation: blink 1s linear infinite;
+}
+
+
+/* animation for modal to say press any key to start game  */
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* music checkbox  */
+
+.musicCheckBox {
+    position: absolute;
+    left: 0;
+    top: 10em;
+    background: rgb(202, 197, 197);
+    width: 100px;
+    border-radius: 0 40% 40% 0;
+    height: 90px;
+    box-shadow: 0 0 15px 3px rgb(255, 255, 255);
+}
+
+.musicCheckBox img {
+    padding: 20px 30px;
+    max-width: 50px;
+}
+
+.keysGuide {
+    color: white;
+    text-align: center;
+}
+
+
+/* result card on Game over */
+
+.resultCard {
+    background: rgb(23, 23, 138);
+    padding: 20px;
+    color: white;
+    border-radius: 6px;
+    display: none;
+    width: 700px;
+    text-align: center;
+    line-height: 3em;
+    z-index: 4;
+    max-width: 60vw;
+    position: absolute;
+    box-shadow: 0 0 15px rgb(52, 124, 219);
+}
+
+.resultCard span {
+    font-size: 25px;
+}
+
+.restart {
+    border: none;
+    padding: 10px;
+    min-width: 110px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+}
